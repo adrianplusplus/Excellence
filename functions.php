@@ -93,5 +93,6 @@ function school_custom_rest(){
 add_action('wp_enqueue_scripts', 'load_files');
 add_action('after_setup_theme', 'school_features');
 add_action('pre_get_posts', 'alter_school_queries');
-
 add_action('rest_api_init', 'school_custom_rest');
+
+require get_theme_file_path('/inc/search-route.php');
