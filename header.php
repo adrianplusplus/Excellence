@@ -26,12 +26,12 @@
                 wp_nav_menu($args);
                 ?>
                 -->
-                <li <?php if(is_front_page()) echo 'class="current-menu-item"'?>><a href="<?php echo site_url();?>">Home</a></li>
-                <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/blog');?>">Blog</a></li>
-                <li <?php if(is_page('about-us') or wp_get_post_parent_id(0) == 12) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about-us');?>">About</a></li>
-                <li <?php if(get_post_type() == 'course') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('course') ?>">Courses</a></li>
-                <li <?php if(get_post_type() == 'event' or is_page('past-events-archive')) echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('event') ?>">Events</a></li>
-                <li><a href="#">Blog</a></li>  
+                <li <?php if (is_front_page()) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url(); ?>">Home</a></li>
+                <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+                <li <?php if (is_page('about-us') or wp_get_post_parent_id(0) == 12) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about-us'); ?>">About</a></li>
+                <li <?php if (get_post_type() == 'course') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('course') ?>">Courses</a></li>
+                <li <?php if (get_post_type() == 'event' or is_page('past-events-archive')) echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('event') ?>">Events</a></li>
+                <li><a href="#">Blog</a></li>
 
                 <li><a class="sm-btn" href="#">Login</a></li>
                 <li><a class="sm-btn position" href="#">Sign Up</a></li>
@@ -40,7 +40,8 @@
                 <span class="fas fa-times"></span>
             </div>
             <div class="search-icon">
-                <span class="fas fa-search"></span>
+                <a href="<?php echo site_url('/search') ?>"><span class="fas fa-search"></span></a>
+
             </div>
         </nav>
     </header>

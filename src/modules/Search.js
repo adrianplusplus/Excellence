@@ -21,7 +21,7 @@ class Search {
       this.handleSearchQuery.bind(this)
     );
   }
-  openSearchPanel() {
+  openSearchPanel(e) {
     console.log("search panel open");
     this.searchPanel.classList.add("search-panel-visible");
     document.body.classList.add("disable-scroll");
@@ -29,6 +29,7 @@ class Search {
     this.searchInput.focus();
     this.searchResults.innerHTML = "";
     this.isSearchOpen = true;
+    e.preventDefault();
   }
   closeSearchPanel() {
     this.searchPanel.classList.remove("search-panel-visible");
